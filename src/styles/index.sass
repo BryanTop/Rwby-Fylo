@@ -1,0 +1,413 @@
+$mainBg: hsl(218, 28%, 13%)
+$introBg: hsl(217, 28%, 15%)
+$footerBg: hsl(216, 53%, 9%)
+$testimonialBg: hsl(219, 30%, 18%) 
+
+$cyan: hsl(176, 68%, 64%)
+$blue: hsl(198, 60%, 50%)
+
+$white: hsl(0, 0%, 100%)
+
+$font: 'Open Sans'
+$fontSize: 14px
+$lightBold: 400
+$darkBold: 700
+
+body
+    background: $mainBg
+    font-family: $font
+    font-size: $fontSize
+    margin: 0
+    color: $white
+    height: 200em
+
+.Btn
+    padding: 10px 40px
+    border-radius: 50px
+    background: $cyan
+    border: $cyan
+    color: $white
+    &:hover
+        color: $blue
+
+header
+    background: $introBg 
+#showcaseBgCurvy
+    background-image: url('../images/bg-curvy-desktop.svg')
+    background-size: cover
+    width: 100vw
+    height: 30em
+    position: relative
+    bottom: 30em
+    z-index: 1
+nav
+    display: flex
+    margin: 0 1em 1em 1em
+    padding: 1em
+    .navChild
+        flex: 4
+    .navbar
+        flex: 1
+        padding: 1em
+        margin: auto 2em
+        .navbarContent
+            .navbarNav
+                display: flex!important
+                justify-content: space-between
+                list-style: none
+                display: inline
+                a
+                    &:hover
+                        color: $cyan
+                        cursor: pointer
+
+.showcase
+    position: relative
+    display: flex
+    flex-direction: column
+    margin: 0 20em 0em 20em
+    z-index: 2
+    padding: 5em
+    .showcaseImg
+        display: flex
+        justify-content: center
+    .showcaseContent
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 5em
+        margin: 0 5em
+        text-align: center
+   
+
+.mainContent
+    position: relative
+    bottom: 30em
+    background: $mainBg
+    margin: auto
+    padding: 2em 5em
+
+#cards
+    display: flex
+    justify-content: space-evenly
+    .cardHolder
+        width: 35%
+        .card  
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            padding: 2.5em
+#productivity
+    display: flex
+    align-items: center
+    margin: 2.5em 5em
+    padding: 2.5em
+    .productivityContent
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        width: 70%
+        margin: 0 5em
+        h2
+            font-size: 30px
+            text-align: center
+            width: 100%
+        a 
+            color: $cyan
+
+#reviewSection
+    background: url('../images/bg-quotes.png')
+    background-repeat: no-repeat
+    .reviewCards
+        display: flex
+        margin: 0
+        padding: 2.5em 0.75em
+        .reviewCard
+            background: $testimonialBg
+            padding: 2.5em
+            margin: 0 1em
+            .reviewContent
+                p
+                    font-weight: $lightBold
+            .reviewPerson
+                display: flex
+                img
+                    border-radius: 50%
+                    width: 50px
+                    margin: 10px
+                div
+                    p
+                        &:nth-child(1)
+                            font-weight: $darkBold
+                        &:nth-child(2)
+                            font-weight: $lightBold
+                            font-size: 10px
+#contactCard
+    margin: 5em auto
+    padding: 2.5em 5em
+    width: 40%
+    background: $introBg
+    position: relative
+    top: 10em
+    z-index: 1
+    .contact
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        h2
+            font-size: 30px
+        div
+            input
+                border-radius: 50px
+                width: 25em
+                height: 2em
+
+footer
+    height: 40em
+    background: $footerBg
+    position: relative
+    bottom: 35em
+    z-index: 0
+
+
+.footerContent
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    margin: 1em 2.5em
+    height: inherit
+    .footerLogo
+        flex: 1
+        .footerLogoContent
+            display: inline
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 20px
+            div
+                display: flex
+                justify-content: flex-start
+                img
+                    height: 10px
+                    position: relative
+                    top: 25px
+                    left: 120px
+                div
+                    width: 40%
+                    margin: 10px
+                    position: relative
+                    left: 120px
+
+                    p
+                        text-align: left
+    .footerContact
+        flex: 1
+        .footerContactContent
+            display: flex
+            flex-direction: column
+            align-items: center
+            .contactPhone
+                display: flex
+                img
+                    margin: 10px
+                    height: 20px
+            .contactEmail
+                display: flex
+                img
+                    margin: 10px
+                    height: 20px
+    .footerNav
+        flex: 1
+        height: inherit
+        .footerNavbarContent
+            display: flex
+            justify-content: space-around
+            height: inherit
+            .navbarInnerContent
+                height: inherit
+                .footerNavbar
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-around
+                    height: 30%
+                    position: relative
+                    top: 180px
+                    a
+                        color: $white
+                        text-decoration: none
+                        &:hover
+                            color: $cyan
+    .footerSocial
+        flex: 1
+        .footerSocialInner
+            display: flex
+            justify-content: space-around
+            width: 70%
+            i
+                color: $white
+                &:hover
+                    color: $cyan
+.attributionSection
+    display: flex
+    justify-content: center 
+    width: 100vw
+    position: relative
+    bottom: 35em
+    a
+        color: $white
+        &:hover
+            color: $cyan
+
+
+
+@media only screen and (max-width: 500px) 
+
+    #showcaseBgCurvy
+        background-image: url('../images/bg-curvy-mobile.svg')
+        height: 15em
+        bottom: 20em
+
+    .mainContent
+        bottom: 20em
+        padding: 5em 5em
+    
+
+    
+    nav
+        .navChild
+            flex: 1
+        .navbar
+            padding: 1em 0
+            .navbarContent
+                .navbarNav
+                    justify-content: space-evenly
+    .showcase
+        margin: 0 5em 0em 5em
+        padding: 0
+        .showcaseImg
+            display: flex
+            justify-content: center
+            img
+                width: 20em
+        .showcaseContent
+            padding: 0
+            margin: 0 5em
+
+    #cards
+        display: block
+        width: 100%
+        margin: auto
+        .cardHolder
+            width: 100%
+    
+    #productivity
+        display: block
+        margin: 1em 2.5em
+        padding: 1em
+        .productivityImg
+            img
+                width: 20em
+        .productivityContent
+            width: 100%
+            margin: 0 2.5em
+
+    #reviewSection
+        .reviewCards
+            display: block
+            margin: 0.5em 1.25em
+            padding: 1em 0
+            .reviewCard
+                padding: 2.5em
+                margin: 1em 1em
+                
+    #contactCard
+        width: 70%
+        .contact
+            div
+                input
+                    width: 15em
+
+    footer
+        height: 55em
+        padding-top: 5em
+        bottom: 25em
+
+
+    .footerContent
+        display: block
+        height: inherit
+        .footerLogo
+            flex: 1
+            .footerLogoContent
+                display: inline
+                display: flex
+                flex-direction: column
+                align-items: center
+                padding: 20px
+                div
+                    display: flex
+                    justify-content: flex-start
+                    img
+                        height: 10px
+                        position: relative
+                        top: 25px
+                        left: 120px
+                    div
+                        width: 40%
+                        margin: 10px
+                        position: relative
+                        left: 120px
+
+                        p
+                            text-align: left
+        .footerContact
+            flex: 1
+            .footerContactContent
+                display: flex
+                flex-direction: column
+                align-items: center
+                .contactPhone
+                    display: flex
+                    img
+                        margin: 10px
+                        height: 20px
+                .contactEmail
+                    display: flex
+                    img
+                        margin: 10px
+                        height: 20px
+        .footerNav
+            flex: 1
+            height: 50%
+            .footerNavbarContent
+                display: flex
+                flex-direction: column
+                justify-content: flex-start
+                height: 50%
+                width: 25%
+                margin: auto
+                .navbarInnerContent
+                    .footerNavbar
+                        height: 30%
+                        top: 20px
+        .footerSocial
+            flex: 1
+            .footerSocialInner
+                display: flex
+                justify-content: center
+                width: 100%
+                i
+                    margin: 0 10px
+    
+    .attributionSection
+        display: flex
+        justify-content: center 
+        width: 100vw
+        position: relative
+        bottom: 25em
+        a
+            color: $white
+            &:hover
+                color: $cyan
