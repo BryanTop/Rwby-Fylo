@@ -7,6 +7,9 @@ module.exports = {
         {
           test: /\.html$/i,
           loader: 'html-loader',
+          options: {
+            minimize: true
+          }
         },
         {
             test: /\.m?js$/,
@@ -21,9 +24,15 @@ module.exports = {
           {
             test: /\.(jpe?g|png|gif|svg)$/i,
             use: [
-              'url-loader?limit=10000',
-              'img-loader'
-            ]
+              {
+                loader: 'file-loader',
+                options: {
+                  esModule: false,
+                  outputPath: "images"
+                }
+              },
+            ],
+           
           },
           {
               test: /\.sass$/,
